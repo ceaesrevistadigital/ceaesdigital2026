@@ -97,87 +97,27 @@ h2{
     margin-bottom: 2px;
 }
 
-@media (max-width: 768px) {
-    
-    /* BLOQUEO HORIZONTAL: Evita que la pantalla se mueva hacia los costados */
-    html, body {
-        max-width: 100% !important;
-        overflow-x: hidden !important;
-        height: auto !important;
-    }
+/* DISEÑO RESPONSIVE Hacemos que la página se adapte dispositivos mas chicos */
 
-    /* 1. ELIMINAR EL ESPACIO AZUL GIGANTE */
+/*TABLET: pantallas menores a 900px */
+@media (max-width: 900px) {
     main {
-        height: auto !important;
+        /* Pasamos de 3 columnas a 2 columnas */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*CELULAR: pantallas menores a 580px*/
+@media (max-width: 580px) {
+    main {
+        /* Pasamos a 1 sola columna */
+        grid-template-columns: 1fr;
+        margin: 20px auto;
     }
 
-    /* 2. EL BANNER: Anulamos los 1600px para que se adapte al ancho del celular */
-    .banner {
-        width: 100% !important;
-        height: auto !important;
-    }
-    .banner img {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    /* 3. EL MENÚ Y LAS LETRAS: Bajamos el tamaño a 18px y centramos todo */
-    nav {
-        height: auto !important; /* Le quitamos los 60px fijos de PC */
-    }
-    
-    .flexcontainernav {
-        display: flex !important;
-        flex-direction: column !important; /* Los links van uno abajo del otro */
-        align-items: center !important;
-        justify-content: center !important;
-        margin-bottom: 25px !important; /* Bajamos los 90px de PC */
-        padding: 15px 0 !important;
-        width: 100% !important;
-    }
-
-    .flexcontainernav a {
-        font-size: 19px !important; /* Achicamos la letra para que entre perfecto */
-        padding: 5px 0 !important;
-        text-align: center !important;
-        width: 100% !important;
-    }
-
-    /* 4. EL CARRUSEL: Cambiamos el 100vh de ancho por 100% de la pantalla */
-    .carousel-item img {
-        width: 100% !important;
-        height: 40vh !important; /* Altura ideal para celulares */
-        object-fit: cover !important;
-    }
-
-    /* 5. LA GRILLA DE TARJETAS: Una sola columna limpia */
-    .grilla {
-        display: grid !important;
-        grid-template-columns: 1fr !important; /* 1 sola columna */
-        gap: 25px !important;
-        padding: 0 15px !important;
-        margin: 20px auto !important;
-        max-width: 100% !important;
-    }
-
-    /* 6. LAS TARJETAS */
-    .tarjeta {
-        width: 100% !important;
-        max-width: 340px !important; /* Evita que la tarjeta sea gigante */
-        margin: 0 auto !important;
-    }
-
-    .tarjeta img {
-        width: 100% !important;
-        height: auto !important;
-    }
-
-    /* 7. EL FOOTER: Le quitamos los 100px fijos de PC para que no tape el texto */
-    footer {
-        height: auto !important;
-    }
-    
-    .flexcontainerfooter {
-        padding: 20px 10px !important;
+    /* Los links del menú se muestran apilados */
+    nav a {
+        display: block;
+        margin: 6px 0;
     }
 }
