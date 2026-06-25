@@ -94,27 +94,27 @@ h2{
 /* DISEÑO RESPONSIVE Hacemos que la página se adapte dispositivos mas chicos */
 
 /*TABLET: pantallas menores a 900px */
-@media (max-width: 900px) {
+/*@media (max-width: 900px) {
     main {
         /* Pasamos de 3 columnas a 2 columnas */
-        grid-template-columns: repeat(2, 1fr);
+      /*  grid-template-columns: repeat(2, 1fr);
     }
 }
 
 /*CELULAR: pantallas menores a 580px*/
-@media (max-width: 580px) {
+/*@media (max-width: 580px) {
     main {
         /* Pasamos a 1 sola columna */
-        grid-template-columns: 1fr;
+      /*  grid-template-columns: 1fr;
         margin: 20px auto;
     }
 
     /* Los links del menú se muestran apilados */
-    nav a {
+   /* nav a {
         display: block;
-        margin: 6px 0;
+        margin: 6px 0;/*
     }
-}
+}/*
 
 
 
