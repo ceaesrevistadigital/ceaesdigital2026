@@ -1,16 +1,40 @@
-* {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+/* --- CONFIGURACIÓN DE TIPOGRAFÍA MODERNA / HEGEMÓNICA --- */
+@import url('https://googleapis.com');
 
+* {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
 
 body {
     background-color: #8fbbd6;
     margin: 0px;
 }
 
+/* --- BANNER NATURAL Y PROPORCIONAL --- */
+header {
+    width: 100%;
+}
+
+.banner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+/* --- MENÚ DE NAVEGACIÓN --- */
 nav {
     width: 100%;
-    height: 50px;
+    height: auto;
     background-color: #fed766;
 }
 
@@ -18,20 +42,92 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 90px;
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-bottom: 50px;
+    padding: 12px 20px;
 }
 
 a {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 24px;
     color: black;
-    font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    transition: color 0.2s ease;
 }
 
+a:hover {
+    color: #4a4a4a;
+}
+
+/* --- DISEÑO DEL CARRUSEL ORIGINAL --- */
+.carousel-item img {
+    width: 100vh;
+    height: 100%;
+    object-fit: cover;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h5 {
+    color: rgb(252, 250, 250);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* --- SECCIÓN GRILLA --- */
+.grilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.tarjeta {
+    background-color: #fceec3;
+    border-radius: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 15px 15px 10px 15px;
+    color: #1a1a1a;
+}
+
+.leermas {
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 15px;
+    margin-top: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --- PIE DE PÁGINA (FOOTER) --- */
 footer {
     background-color: #FED766;
-    height: 100px;
+    min-height: 120px;
+    padding: 20px;
+    margin-top: 50px;
 }
 
 .flexcontainerfooter {
@@ -39,79 +135,191 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
+    gap: 12px;
 }
 
-.carousel-item img {
-    width: 100vh;
-    height: 100%;
-    object-fit: cover;
+.flexcontainerfooter p {
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+    line-height: 1.4;
 }
 
-p{
-    margin-top: 0px;
-    margin-bottom: 0px;
+.flexcontainerfooter div {
+    display: flex;
+    gap: 15px;
 }
 
-.grilla{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+.flexcontainerfooter img {
+    height: 30px;
+    width: auto;
 }
 
-.tarjeta{
-   background-color: #fceec3;
-   border-radius: 20px;
+
+/* --- RESPONSIVE / ADAPTACIÓN --- */
+
+@media (max-width: 900px) {
+    .grilla {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    a {
+        font-size: 18px;
+    }
 }
 
-.tarjeta img{
+@media (max-width: 580px) {
+    .banner {
+        height: auto !important; 
+    }
+    
+    .banner img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+    .flexcontainernav {
+        justify-content: center;
+        gap: 15px; 
+        margin-bottom: 25px;
+        padding: 6px 10px !important;
+    }
+    
+    a {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1rem !important; 
+        line-height: 1.2;
+    }
+
+    /* CORRECCIÓN DE IMÁGENES Y TARJETAS EN CELULAR */
+    .grilla {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        justify-items: center; /* Centra las tarjetas compactas en la pantalla */
+    }
+
+    .tarjeta {
+        width: 100%;
+        max-width: 320px; /* Evita que la tarjeta se ensanche más que el carrusel */
+    }
+
+    .tarjeta img {
+        height: 180px; /* Reduce la altura de la foto para mantenerla estilizada */
+    }
+
+    h2 {
+        font-size: 17px; /* Letra un poco más chica para que encaje con el nuevo tamaño */
+    }
+
+    .flexcontainerfooter p {
+        font-size: 13px;
+    }
+}
+
+/* Modificá estas secciones en tu archivo style.css */
+
+body {
+    background-color: #FDF0CD; /* El amarillo crema suave de fondo para que no canse la vista */
+    margin: 0px;
+}
+
+nav {
     width: 100%;
-    height: 250px;
+    height: auto;
+    background-color: #0F2C59; /* El azul profundo pasa al menú */
+}
+
+a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #FDF0CD; /* Las letras del menú ahora son crema para que contrasten con el azul */
+    font-weight: 700;
+}
+
+a:hover {
+    color: #FFD23F; /* Efecto al pasar el mouse */
+}
+
+.tarjeta {
+    background-color: #ffffff; /* Las tarjetas blancas destacan más */
+    border-radius: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Sombra suave estética */
+}
+
+h2 {
+    color: #0F2C59; /* Títulos en azul profundo */
 }
 
 .leermas {
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-    margin-left: 10px;
-
+    color: #C84B31; /* El rojo se usa acá para invitar al clic de forma fina */
+    font-size: 16px;
+    font-weight: 600;
 }
 
-h2{
-    font-size: 25px;
-    margin-left: 10px;
-    margin-bottom: 2px;
+footer {
+    background-color: #0F2C59; /* El footer combina con el menú superior */
+    color: #ffffff;
 }
 
-.banner {
-    width: 100%;
-    height: 110px;
+/* --- PIE DE PÁGINA (FOOTER EN AZUL PROFUNDO) --- */
+footer {
+    background-color: #0F2C59; /* Cambiado al azul principal */
+    min-height: 120px;
+    padding: 20px;
+    margin-top: 50px;
 }
 
-h5{
-    color: black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.flexcontainerfooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
 }
 
-/* DISEÑO RESPONSIVE Hacemos que la página se adapte dispositivos mas chicos */
+/* El primer párrafo (Diseño, materia, etc.) pasa a blanco puro */
+.flexcontainerfooter p:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff; /* Blanco de alta legibilidad */
+    line-height: 1.4;
+}
 
-/*TABLET: pantallas menores a 900px */
-/*@media (max-width: 900px) {
-    main {
-        /* Pasamos de 3 columnas a 2 columnas */
-      /*  grid-template-columns: repeat(2, 1fr);
+/* El segundo párrafo (Colegio: CEAES) pasa a crema suave para dar jerarquía */
+.flexcontainerfooter p:nth-child(2) {
+    font-size: 14px;
+    font-weight: 700;
+    color: #FDF0CD; /* Amarillo crema de la paleta para resaltar el colegio */
+    line-height: 1.4;
+}
+
+.flexcontainerfooter div {
+    display: flex;
+    gap: 15px;
+}
+
+.flexcontainerfooter img {
+    height: 30px;
+    width: auto;
+    /* Invierte ligeramente los logos si son negros para que se vean bien sobre azul, 
+       o podés remover esta línea si tus imágenes ya tienen fondo o son de color */
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.2)); 
+}
+
+/* Adaptación del tamaño de letra del footer en celulares */
+@media (max-width: 580px) {
+    .flexcontainerfooter p:first-child,
+    .flexcontainerfooter p:nth-child(2) {
+        font-size: 13px;
     }
 }
 
-/*CELULAR: pantallas menores a 580px*/
-/*@media (max-width: 580px) {
-    main {
-        /* Pasamos a 1 sola columna */
-      /*  grid-template-columns: 1fr;
-        margin: 20px auto;
-    }
-
-    /* Los links del menú se muestran apilados */
