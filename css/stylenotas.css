@@ -1,0 +1,75 @@
+.grilla-notas{
+    display: grid;
+    grid-template-columns: 2fr 1fr; 
+    gap: 40px;
+
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.columnauno{
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    padding: 30px 35px;
+}
+
+.columnauno img{
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.columnados{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    max-height: 400px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+    padding: 30px 35px;
+}
+
+
+h3{
+    background-color: rgb(11, 33, 82);
+    color: white;
+    align-items: center;
+
+
+}
+p{
+    font-size: 0.8em;
+    margin-bottom: 24px;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+
+
+
+
+.negrita{
+    font-weight: 1000;
+
+}
+   
+        
+
+
+
+
+
+
+
+
+
+
