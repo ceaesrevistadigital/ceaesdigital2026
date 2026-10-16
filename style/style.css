@@ -50,7 +50,7 @@ nav {
 
 a {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 16px;
     color: black;
     font-weight: 700;
     letter-spacing: -0.5px;
@@ -105,21 +105,11 @@ h5 {
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1.3;
     margin: 15px 15px 10px 15px;
     color: #1a1a1a;
-}
-
-.leermas {
-    color: black;
-    font-size: 16px;
-    font-weight: 600;
-    margin-left: 15px;
-    margin-top: auto;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 /* --- PIE DE PÁGINA (FOOTER) --- */
@@ -260,8 +250,12 @@ h2 {
 
 .leermas {
     color: #C84B31; /* El rojo se usa acá para invitar al clic de forma fina */
-    font-size: 16px;
+    font-size: 13px;
     font-weight: 600;
+    margin-left: 15px;
+    margin-top: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 footer {
