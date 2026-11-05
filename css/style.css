@@ -256,6 +256,12 @@ a:hover {
 
 h2 {
     color: #0F2C59; /* Títulos en azul profundo */
+    font-size: 30px;
+}
+
+h5{
+        color: #0F2C59; /* Títulos en azul profundo */
+        font-size: 15px;
 }
 
 .leermas {
