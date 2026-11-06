@@ -328,4 +328,10 @@ footer {
         font-size: 13px;
     }
 }
-
+.grilla-sobrenosotros{
+    width: 85%;
+    margin-left: 7.75%;
+}
+.h2sobrenosotros{
+    align-items: center;
+}
