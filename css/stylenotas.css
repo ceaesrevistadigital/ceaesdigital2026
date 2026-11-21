@@ -23,6 +23,16 @@
     margin-bottom: 24px;
 }
 
+.columnauno img.foto-curso {
+    display: block;
+    width: 100%;
+    max-width: 800px; 
+    height: 430px;
+    margin: 0 auto 24px auto; 
+    object-fit: contain;
+    border-radius: 4px;
+}
+
 .columnados{
     display: flex;
     flex-direction: column;
@@ -60,27 +70,4 @@ p{
 .negrita{
     font-weight: 1000;
 
-}
-   
-h5 {
-    color: rgb(11, 33, 82);
-}
-
-.boton{
-    color: rgb(11, 33, 82);
-}
-
-/* ---------- PUBLICIDAD EN LA COLUMNA DEL COSTADO ---------- */
-/* La caja tenia max-height: 400px y la imagen no entraba: ahora crece con lo que tiene adentro */
-.columnados{
-    max-height: none;
-    align-self: start;
-}
-
-/* La imagen de la publicidad ocupa todo el ancho de la columna */
-.publicidad img{
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
 }
